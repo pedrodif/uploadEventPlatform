@@ -22,15 +22,6 @@ function App() {
   const { data } = useQuery<{lessons: Lesson[]}>(GET_LESSONS_QUERY)
   console.log(data)
 
-  // Exemplo de como fazer um query de maneira tradicional
-  // useEffect(() => {
-  //   client.query({
-  //     query: GET_LESSONS_QUERY,
-  //   }).then(response =>{
-  //     console.log(response.data);
-  //   })
-  // }, [])
-
   return (
     <ul>
       {data?.lessons.map(lesson => {
@@ -39,5 +30,13 @@ function App() {
     </ul>
   )
 }
+// Exemplo de como fazer um query de maneira tradicional
+// useEffect(() => {
+//   client.query({
+//     query: GET_LESSONS_QUERY,
+//   }).then(response =>{
+//     console.log(response.data);
+//   })
+// }, [])
 
 export default App
