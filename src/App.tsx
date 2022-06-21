@@ -1,5 +1,6 @@
 import { gql, useQuery } from "@apollo/client"
-import { useEffect } from "react"
+
+// É necessário fazer o impot do client se quiser fazer a consulta na API a partir do método fetch
 import { client } from "./lib/apollo"
 
 const GET_LESSONS_QUERY = gql`
